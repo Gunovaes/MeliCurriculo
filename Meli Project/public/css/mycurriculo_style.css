@@ -1,0 +1,128 @@
+/* Botão voltar */
+#Button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #231648; 
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+/* animação antes de clicar */
+#Button::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, rgb(251, 255, 0),#0a004a); 
+    z-index: -1;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+#Button:hover {
+    background-color: #1a0f35; 
+    transform: scale(1.05);
+}
+
+#Button:hover::before {
+    opacity: 50%;
+}
+
+/* fotos nos cad */
+#meli {
+    display: flex; 
+    position: relative;
+    right: 65%;
+}
+
+/* contêiner das imagens */
+.image-container {
+    max-width: 40%;
+    border: 2px solid #ccc;
+    padding: 5px;
+    margin-right: 20px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+}
+
+/* animação do mouse (popup) */
+.tooltip {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000000;
+    color: white;
+    padding: 5px 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.image-container:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* imagem brochi */
+.round-image-container {
+    display: inline-block;
+    position: relative;
+}
+
+.image-wrapper {
+    width: 100px; 
+    height: 100px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 50%; 
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; 
+}
+
+/* popup foto do broche */
+.popup {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000000;
+    color: white;
+    padding: 5px 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.round-image-container:hover .popup {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*whatsapp */
+.icon-fab{
+    font-size: 200%;
+}
