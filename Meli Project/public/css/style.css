@@ -54,6 +54,7 @@ body.index {
   transform: scale(1.1);
 }
 
+/* Mídia query para dispositivos móveis (telas pequenas) */
 @media (max-width: 1000px) {
   body.index {
     
