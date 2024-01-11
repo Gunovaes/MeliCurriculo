@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/return_style.css">
+</head>
+<body>
+  <div class="animated-voltando">VOLTANDO...</div>
+  
+  <div class="box" id="animated-box">
+    <div class="lid"></div>
+    <div class="body">
+      <img src="img/logomeli.png" alt="Logo da Caixa" class="logo">
+    </div>
+    <div class="tape"></div>
+    <div class="seal-line"></div>
+  </div>
+  
+  <div class="img-van">
+    <img src="img/van-meli.jpg" alt="">
+    <div class="overlay-text">#FOTOMELI</div> 
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const box = document.getElementById('animated-box');
+      const tape = document.querySelector('.tape');
+
+      tape.addEventListener('animationiteration', function() {
+        box.classList.add('lacrado');
+      });
+    });
+
+    function Contagem(duracao, tela) {
+      let cronometro = duracao;
+      const interval = setInterval(() => {
+        segundos = parseInt(cronometro);
+        if (--cronometro < 0) {
+          clearInterval(interval);
+          cronometro = duracao;
+          window.location.href = "/";
+        }
+      }, 835);
+    }
+
+    window.onload = () => {
+      var duracao = 5;
+      var tela = window.document.getElementById("cronometro");
+      Contagem(duracao, tela);
+    };
+  </script>
+</body>
+</html>

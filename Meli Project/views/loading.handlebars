@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="/css/loading_style.css">
+    <title></title>
+</head>
+<body class="load">
+    <div class="text-load">
+        BIPANDO O
+        <p>CURRÍCULO</p>
+        <p>AGUARDE...</p>
+    </div>
+    <div class="imagem">
+        <div class="flash-container">
+            <div class="flash"></div>
+        </div>
+        <div class="img-load">
+            <img class="img-scanner" src="img/loading.png" alt="">
+        </div>
+    </div>
+    <script>
+        function Contagem(duracao, tela) {
+            let cronometro = duracao;
+            const interval = setInterval(() => {
+                segundos = parseInt(cronometro);
+                if (--cronometro < 0) {
+                    clearInterval(interval);
+                    cronometro = duracao;      
+                    window.location.href = "/curriculo"; 
+                }
+            }, 1000);
+        }
+
+        window.onload = () => {
+            var duracao = 5;
+            var tela = window.document.getElementById("cronometro");
+            Contagem(duracao, tela);
+        };
+    </script>
+</body>
+</html>
+
+
+
+
+    
+
+
+    
+

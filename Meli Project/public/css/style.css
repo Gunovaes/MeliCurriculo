@@ -1,0 +1,84 @@
+body.index {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background: linear-gradient(100deg, #edca37, #0a004a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0a004a;
+  font-family: 'Arial';
+}
+
+/* Texto animado */
+.animated-text {
+  font-size: 2vw;
+  color: #000000;
+  position: relative;
+  right: 20%;
+  animation: jumpAndChange 2s infinite, colorChange 4s infinite;
+}
+
+@keyframes jumpAndChange {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes colorChange {
+  0%, 100% {
+    color: inherit;
+  }
+  50% {
+    color: #ffffff;
+  }
+}
+
+/* Imagem handheld (index) */
+.image-container {
+  position: absolute;
+  left: 63.7%;
+  top: 13.3%;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+/* Mídia query para dispositivos móveis (telas pequenas) */
+@media (max-width: 1000px) {
+  body.index {
+    
+    Background: linear-gradient(100deg, #edca37, #0a004a);
+    align-items: center;
+    padding: 20px; 
+  }
+  
+  .animated-text {
+    font-size: 4vw; 
+    right: 0; 
+  }
+
+  .image-container {
+    position: static; 
+    margin-top: 20px; 
+  }
+
+  .image-container img {
+    width: 80%; 
+    height: auto; 
+  }
+
+  .image-container:hover img {
+    transform: none; 
+  }
+}
