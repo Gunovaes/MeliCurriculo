@@ -2,9 +2,8 @@
 
 Bem-vindo ao repositório do meu site currículo inspirado na minha experiência dentro da logística do Mercado Livre! Este projeto foi desenvolvido como uma forma criativa e interativa de apresentar minhas habilidades, experiências e jornada profissional, utilizando animações em CSS e JavaScript. 
 
-Acesso: para acessar o site currículo, basta acessar o arquivo handlebars do projeto por meio de qualquer navegador web através do link: 
+Acesso: para visualizar o site currículo, basta acessar o projeto por meio de qualquer navegador web através do link: 
 https://meli-curriculo.vercel.app/
-
 
 ## Visão Geral
 
